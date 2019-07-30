@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TrabalhoGiovana</string>
+    <string-array name="listViewDaTela2">
+        <item> Cefaleia</item>
+        <item> Febre</item>
+        <item> Tosse</item>
+    </string-array>
+
+</resources>
