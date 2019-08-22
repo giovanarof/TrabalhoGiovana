@@ -22,6 +22,5 @@ public class Tela3<arraylist> extends AppCompatActivity {
 
 
         }
-
     }
 

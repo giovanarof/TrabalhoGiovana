@@ -1,8 +1,10 @@
 package ifpr.com.trabalhogiovana;
 
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,9 +51,17 @@ public class Tela2 extends AppCompatActivity {
         listViewDaTela2.setOnItemClickListener(itemClickListener);
     }
 
-    public void criarNotificacao()
-    {
+    public void criarNotificacao() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel =
+                    new NotificationChannel("my_channel_id",
+                            "my_channel", NotificationManager.IMPORTANCE_DEFAULT);
+        NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        nm.createNotificationChannel(channel);
+        }
+
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "my_channel_id");
+        builder.setSmallIcon(R.drawable.download);
         builder.setContentTitle("Sintomas");
         builder.setContentText("Você está buscando informaçoes sobre sintomas");
         builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);

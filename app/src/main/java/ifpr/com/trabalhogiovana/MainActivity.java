@@ -30,8 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         };
-        builder.setPositiveButton("Ok", btnOk);
-        builder.create().show();
+
+            builder.setPositiveButton("Ok", btnOk);
+            builder.create().show();
     }
 
     public void vaiParaOutraTela(View v){
