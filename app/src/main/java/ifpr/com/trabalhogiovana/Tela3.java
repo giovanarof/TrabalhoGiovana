@@ -19,7 +19,7 @@ public class Tela3<arraylist> extends AppCompatActivity {
 
         TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(sintoma);
-
+        //GIT ATT
 
         }
     }
